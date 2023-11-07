@@ -1,0 +1,32 @@
+
+Algorithme AnalyserPhrase
+
+Var
+longueurPhrase, nombreMot, nombreVoyelle: Integer
+phrase: String
+
+Debut
+longueurPhrase <-0
+nombreMot <-0
+nombreVoyelle <-0
+
+Afficher "Entrez une phrase se terminant par un point (.)"
+Lire phrase
+
+Pour caractere de 1 a la longueur de la (phrase):
+longueurPhrase <- longueurPhrase +1
+
+SI caractere <- " "
+nombreMot <-nombreMot +1
+
+FIN SI
+
+Si caractere <- "a" OU caractere <- "o" OU caractere <- "u" OU caractere <- "i" OU caractere <- "e" OU caractere <- "y"
+nombreVoyelle <-nombreVoyeelle +1
+
+FIN SI
+
+Afficher "Voici un example de phrase"
+
+Fin Pour
+FIN
