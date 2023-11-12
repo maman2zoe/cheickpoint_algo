@@ -71,3 +71,133 @@ FIN
 
 
 
+EXERCICE 3 de Algorithme
+
+Algorithme ProduitScalaire(v1,v2)
+
+Var 
+//Declare variables for vectors
+vector1: Tableau_de_reel [3];
+vector2: Tableau_de_reel [3];
+vector3: Tableau_de_reel [3];
+vectors: Tableau_tableau_de_reel [3];
+
+    Si Longueur(v1) # longueur(v2) ALORS
+        Retoune None // Les vecteurs doivent avoir la meme dimension
+    Fin SI
+    ps <-0
+    Pour i de 1 a longueur(v1)
+        ps <- ps + v1[i]*v2[i]
+    Fin Pour
+    Retourner ps
+
+Fin Algorithme
+
+
+Algorithme SontOrthogonaux(vecteurs)
+    Pour i de 1 a Longueur (vecteurs) -1
+    Pou j de i+1 a Longueur(vecteurs)
+        ps <- ProduitsScalaire(vecteurs[i], vecteurs[j])
+        si ps = 0 ALORS
+            Afficher "Les vecteurs" , i, "et", j, "ne sont pas orthogonaux."
+            Fin SI
+        Fin Pour
+    Fin Pour
+Fin Algorithme
+
+Debut
+    vecteur1 <- [1,0,0]
+    vecteur2 <- [0,1,0]
+    vecteurs3 <- [0,0,1]
+    vecteurs <- [vecteur1, vecteur2, vecteur3]
+    SontOrthogonaux(vecteurs)
+
+Fin
+
+
+
+
+Exercide 4 de Algorithme
+
+Algorithme DotProduct(v1,v2)
+//Calculer le produit scalaire de deux vecteurs
+    ps= 0
+    pour i=0 à longueur(v1) -1
+        ps= ps + v1[i] * v2[i]
+        fin pour
+    Retourner ps
+Fin Algorithme
+
+Algorithme SontOrthogonaux(vecteurs)
+//Verifier si n paires de vecteurs sont orthogonaux 
+    pour i= 0 a longueur(vecteurs) -2
+    pour j= i+1 a longueur(vecteurs) -1
+        ps= DotProduct(vecteurs[i], vecteurs[j])
+        si ps=0 alors 
+            Afficher "Les vecteurs", i, "et", j, ne sont pas orthogonaux."
+            Fin si
+        fin pour
+    fin pour
+Fin Algorithme
+
+Var
+//Declarer les variables pour les vecteurs
+    vecteur1: TABLEAU DE REEL [3];
+    vecteur2: TABLEAU DE REEL [3];
+    vecteur3: TABLEAU DE REEL [3];
+    vecteurs: TABLEAU DE TABLEAU DE REEL [3];
+
+DEBUT
+//Initialiser les vecteurs
+vecteur1: [1.0,0.0,0.0];
+vecteur2: [0.0,1.0,0.0];
+vecteur3: [0.0,0.0,1.0];
+
+vecteur= [vecteur1, vecteur2, vecteur3]
+
+SontOrthogonaux(vecteurs)
+
+FIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
