@@ -30,3 +30,44 @@ Afficher "Voici un example de phrase"
 
 Fin Pour
 FIN
+
+
+
+
+Algorithme addition
+
+Var
+//Declaration des variables
+tab_ensemble_1: TABLEAU D'ENTIERS[4];
+tab_ensemble_2: TABLEAU D'ENTIERS[5];
+i: ENTIER
+somme: ENTIER
+
+DEBUT 
+tab_ensemble_1 <- [3,1,7,9]
+tab_ensemble_2 <- [2,4,1,9,3]
+somme <- 0;
+
+
+POUR i DE 0 A 3 FAIRE
+    SI tab_ensemble_1[i] N'EST PAS 
+    DANS tab_ensemble_2 ALORS
+        somme <- somme+
+    tab_ensemble_1[i];
+    FIN SI
+FIN POUR
+
+POUR i DE 0 A 4 FAIRE
+    SI tab_ensemble_2[i] N'EST PAS 
+    DANS tab_ensemble_1 ALORS
+    somme <- somme+
+    tab_ensemble_2[i];
+    FIN SI
+FIN POUR
+
+AFFICHER SOMME;
+
+FIN
+
+
+
