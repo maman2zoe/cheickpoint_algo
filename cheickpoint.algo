@@ -1,4 +1,33 @@
 
+Algorithme TriParInsertion(tableau)
+    Pour i DE 1 A Longueur(tableau) - 1 FAIRE
+        elementCourant <- tableau[i]
+        j <- i - 1
+        TantQue j >= 0 ET tableau[j] > elementCourant FAIRE
+            tableau[j + 1] <- tableau[j]
+            j <- j - 1
+        FinTantQue
+        tableau[j + 1] <- elementCourant
+    FinPour
+FinAlgorithme
+VAR
+    // Déclaration des variables
+    tableauAtrier: TABLEAU D'ENTIERS [5]  // Remplacez 5 par la taille de votre tableau
+    i: ENTIER
+DEBUT
+    // Initialisation du tableau à trier
+    tableauAtrier <- [12, 11, 13, 5, 6]
+    // Appel de l'algorithme de tri par insertion
+    TriParInsertion(tableauAtrier)
+    // Affichage du tableau trié
+    POUR i DE 0 A Longueur(tableauAtrier) - 1 FAIRE
+        AFFICHER tableauAtrier[i]
+    FINPOUR
+FIN
+
+
+
+
 Algorithme AnalyserPhrase
 
 Var
