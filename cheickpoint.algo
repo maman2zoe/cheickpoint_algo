@@ -1,4 +1,63 @@
 
+Algorithme EstPalindrome(mot)
+    // Supprimer les espaces et convertir en minuscules pour une comparaison insensible à la casse
+    mot <- Remplacer(mot, " ", "")
+    mot <- Minuscules(mot)
+    // Vérifier si le mot est vide ou a un seul caractère
+    Si Longueur(mot) <= 1 alors
+        Retourner Vrai  // Un mot vide ou un mot d'un seul caractère est un palindrome
+    Fin Si
+    gauche <- 1
+    droite <- Longueur(mot)
+    TantQue gauche < droite
+        Si mot[gauche] ≠ mot[droite] alors
+            Retourner Faux  // Les caractères ne correspondent pas, le mot n'est pas un palindrome
+        Fin Si
+        gauche <- gauche + 1
+        droite <- droite - 1
+    Fin TantQue
+    Retourner Vrai  // Le mot est un palindrome
+Fin Algorithme
+VAR
+    // Déclarer les variables
+    mot1: CHAINE DE CARACTERES
+    mot2: CHAINE DE CARACTERES
+    mot3: CHAINE DE CARACTERES
+    mot4: CHAINE DE CARACTERES
+DEBUT
+    // Initialiser les mots
+    mot1 <- "gag"
+    mot2 <- "kayak"
+    mot3 <- "php"
+    mot4 <- "radar"
+    // Appeler l'algorithme EstPalindrome pour chaque mot
+    SI EstPalindrome(mot1) ALORS
+        Afficher "mot1 est un palindrome"
+    SINON
+        Afficher "mot1 n'est pas un palindrome"
+    FIN SI
+    SI EstPalindrome(mot2) ALORS
+        Afficher "mot2 est un palindrome"
+    SINON
+        Afficher "mot2 n'est pas un palindrome"
+    FIN SI
+    SI EstPalindrome(mot3) ALORS
+        Afficher "mot3 est un palindrome"
+    SINON
+        Afficher "mot3 n'est pas un palindrome"
+    FIN SI
+    SI EstPalindrome(mot4) ALORS
+        Afficher "mot4 est un palindrome"
+    SINON
+        Afficher "mot4 n'est pas un palindrome"
+    FIN SI
+FIN
+
+
+
+
+
+
 Algorithme TriParInsertion(tableau)
     Pour i DE 1 A Longueur(tableau) - 1 FAIRE
         elementCourant <- tableau[i]
